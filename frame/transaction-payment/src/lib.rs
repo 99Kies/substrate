@@ -71,6 +71,8 @@ use frame_support::{
 	},
 };
 
+use frame_support::runtime_print;
+
 mod payment;
 mod types;
 
@@ -523,6 +525,18 @@ where
 			let adjusted_weight_fee = multiplier.saturating_mul_int(unadjusted_weight_fee);
 
 			let base_fee = Self::weight_to_fee(T::BlockWeights::get().get(class).base_extrinsic);
+
+			runtime_print!("==================================================");
+			runtime_print!("==================================================");
+			runtime_print!("==================================================");
+			runtime_print!("base fee = {?}", base_fee.clone());
+			runtime_print!("len fee = {?}", len_fee.clone());
+			runtime_print!("target_adjusted = {?}", multiplier.clone());
+			runtime_print!("weight fee = {?}", adjusted_weight_fee.clone());
+			runtime_print!("==================================================");
+			runtime_print!("==================================================");
+			runtime_print!("==================================================");
+
 			FeeDetails {
 				inclusion_fee: Some(InclusionFee {
 					base_fee,
