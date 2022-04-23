@@ -529,10 +529,10 @@ where
 			runtime_print!("==================================================");
 			runtime_print!("==================================================");
 			runtime_print!("==================================================");
-			runtime_print!("base fee = {?}", base_fee.clone());
-			runtime_print!("len fee = {?}", len_fee.clone());
-			runtime_print!("target_adjusted = {?}", multiplier.clone());
-			runtime_print!("weight fee = {?}", adjusted_weight_fee.clone());
+			runtime_print!("base fee = {:?}", base_fee.clone());
+			runtime_print!("len fee = {:?}", len_fee.clone());
+			runtime_print!("target_adjusted = {:?}", multiplier.clone());
+			runtime_print!("weight fee = {:?}", adjusted_weight_fee.clone());
 			runtime_print!("==================================================");
 			runtime_print!("==================================================");
 			runtime_print!("==================================================");
